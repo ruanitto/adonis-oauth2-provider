@@ -30,6 +30,9 @@ In auth.js add:
   }
 ```
 
+'@ruanitto/adonis-oauth2-provider/providers/OAuth2Provider' - Auth Provider
+'@ruanitto/adonis-oauth2-provider/providers/OAuth2RoutesProvider' - Register Routes (Optional)
+
 # Model
 *Scope*
 ```javascript
