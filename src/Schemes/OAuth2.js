@@ -563,7 +563,7 @@ class OAuth2Scheme extends BaseTokenScheme {
     }
 
     if (!this._ctx.request.is('application/x-www-form-urlencoded')) {
-      throw new GE.HttpException('Invalid request: content must be application/x-www-form-urlencoded', 400, 'E_rEQUEST_CONTENT');
+      throw new GE.HttpException('Invalid request: content must be application/x-www-form-urlencoded', 400, 'E_REQUEST_CONTENT');
     }
 
     let client = await this._getClient()
