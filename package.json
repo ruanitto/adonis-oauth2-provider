@@ -1,23 +1,22 @@
 {
-  "name": "adonis-oauth2-provider",
+  "name": "@ruanitto/adonis-oauth2-provider",
   "version": "0.0.2-beta",
   "description": "Adonis OAuth2 Provider",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo TODO"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ruanitto/adonis-oauth2-provider.git"
   },
   "keywords": [
-    "AdonisJS",
-    "Adonis",
-    "Provider",
-    "Adonis",
-    "OAuth2",
-    "Adonis",
-    "Oauth"
+    "adonisJS",
+    "adonis",
+    "provider",
+    "adonis",
+    "oauth2",
+    "oauth"
   ],
   "author": "Rafael Gomes <madrafael.gsilva@gmail.com>",
   "license": "ISC",
