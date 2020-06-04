@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/ruanitto/adonis-oauth2-provider/issues"
   },
-  "homepage": "https://github.com/ruanitto/adonis-oauth2-provider#readme"
+  "homepage": "https://github.com/ruanitto/adonis-oauth2-provider#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
