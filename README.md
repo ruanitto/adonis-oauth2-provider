@@ -26,12 +26,16 @@ In auth.js add:
       public: fs.existsSync(Env.get('APP_OAUTHKEY_PATH', 'authkeys') + '/oauth-public.key') ? fs.readFileSync(Env.get('APP_OAUTHKEY_PATH', 'authkeys') + '/oauth-public.key') : Logger.error('OAuth Keys not found! Please, run `adonis oauth:key` to generate.'),
       expiresIn: Env.get('TOKEN_EXPIRE', '15d'),
       notBefore: 0
+    },
+    routes_config: {
+      register_routes: false, // Define if provider register oauth/token route
+      use_prefix: false, // Define if oauthProvider add prefix before oauth/token route
+      prefix: null
     }
   }
 ```
 
 '@ruanitto/adonis-oauth2-provider/providers/OAuth2Provider' - Auth Provider
-'@ruanitto/adonis-oauth2-provider/providers/OAuth2RoutesProvider' - Register Routes (Optional)
 
 # Model
 *Scope*
@@ -46,6 +50,14 @@ static scopeFindForOAuth2(builder, username) {
 validateForOAuth2(password) {
     ...function for validation
 }
+```
+
+*Custom route*
+Use auth.token() inside route, ex:
+```javascript
+Route.post('token', ({ auth }) => {
+  return auth.token()
+})
 ```
 
 *TODO*

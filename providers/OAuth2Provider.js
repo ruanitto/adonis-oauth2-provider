@@ -33,11 +33,18 @@ class OAuth2Provider extends ServiceProvider {
 
   _addRoutes() {
     const Route = use('Route')
-    Route.group('oauth', () => {
-      Route.post('token', ({ auth }) => {
-        return auth.token()
-      })
-    }).prefix('oauth')
+    const Config = use('Config')
+    const use_routes = Config.get('auth.oauth2.routes_config.register_routes')
+    const use_prefix = Config.get('auth.oauth2.routes_config.use_prefix')
+    const prefix = Config.get('auth.oauth2.routes_config.prefix')
+    if (use_routes) {
+      const oauth_prefix = (use_prefix && prefix) ? (prefix.trim() + '/oauth') : 'oauth'
+      Route.group('oauth', () => {
+        Route.post('token', ({ auth }) => {
+          return auth.token()
+        })
+      }).prefix(oauth_prefix)
+    }
   }
 
   register() {
