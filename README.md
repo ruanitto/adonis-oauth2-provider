@@ -64,6 +64,10 @@ Route.post('token', ({ auth }) => {
 authorization_code grant
 client_credentials grant
 
+Views:
+Oauth Authentication
+Login
+
 Routes
 auto instalation
 instructions
