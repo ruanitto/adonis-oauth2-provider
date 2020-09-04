@@ -1,6 +1,6 @@
 {
   "name": "@ruanitto/adonis-oauth2-provider",
-  "version": "0.0.4-beta",
+  "version": "0.0.7-beta",
   "description": "Adonis OAuth2 Provider",
   "main": "index.js",
   "scripts": {
